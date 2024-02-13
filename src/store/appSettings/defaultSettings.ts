@@ -3,6 +3,6 @@
 import { AppSettings } from './appSettings.type';
 
 export const DEFAULT_SETTINGS: AppSettings = {
-    'app.region': { label: 'US East (N. Virginia)', value: 'us-east-1' },
+    'app.region': { label: 'US West (Oregon)', value: 'us-west-2' },
     'app.apiTiming': { label: 'Off', value: 'off' },
 };
