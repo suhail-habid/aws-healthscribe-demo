@@ -18,6 +18,7 @@ import RightPanel from './RightPanel';
 import TopPanel from './TopPanel';
 import ViewResults from './ViewResults';
 import { HealthScribeJob } from './types';
+import './Conversation.css';
 
 export default function Conversation() {
     const { conversationName } = useParams();
