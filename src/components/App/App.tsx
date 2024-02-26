@@ -9,7 +9,7 @@ import Flashbar from '@cloudscape-design/components/flashbar';
 
 import { Amplify } from 'aws-amplify';
 
-// import awsExports from '@/aws-exports';
+import awsExports from '@/aws-exports';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SideNav from '@/components/SideNav';
 import SuspenseLoader from '@/components/SuspenseLoader';
@@ -19,7 +19,7 @@ import { useAuthContext } from '@/store/auth';
 import { useNotificationsContext } from '@/store/notifications';
 import { isUserEmailVerified } from '@/utils/Auth/isUserEmailVerified';
 
-// Amplify.configure(awsExports);
+Amplify.configure(awsExports);
 
 // Lazy components
 const Debug = lazy(() => import('@/components/Debug'));
@@ -41,15 +41,13 @@ export default function App() {
                     <Route path="/debug" element={<Debug />} />
                     <Route path="/conversations" element={<Conversations />} />
                     <Route path="/conversation/:conversationName" element={<Conversation />} />
-                    {/*<Route path="/new" element={<NewConversation />} />*/}
+                    <Route path="/new" element={<NewConversation />} />
                     {/*<Route path="/generate" element={<GenerateAudio />} />*/}
                     {/*<Route path="/settings" element={<Settings />} />*/}
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             ) : (
-                <Routes>
-                    {/*<Route path="*" element={<Welcome />} />*/}
-                </Routes>
+                <Routes>{/*<Route path="*" element={<Welcome />} />*/}</Routes>
             )}
         </Suspense>
     );
