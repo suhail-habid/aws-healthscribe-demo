@@ -240,21 +240,7 @@ export default function TopPanel({
     }
 
     function Loading() {
-        return (
-            <div
-                style={{
-                    flex: 'display',
-                    textAlign: 'center',
-                    paddingTop: '30px',
-                    paddingBottom: '30px',
-                    color: 'var(--color-text-status-inactive-5ei55p, #5f6b7a)',
-                }}
-            >
-                <Box>
-                    <Spinner /> Loading Audio
-                </Box>
-            </div>
-        );
+        return null
     }
 
     function SegmentControls() {
